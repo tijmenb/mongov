@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/tijmenb/mongov"
   gem.license = "MIT"
   gem.summary = %Q{Simple data viewer for MongoDB}
-  gem.description = %Q{Web interface for MongoDB with Sinatra}
+  gem.description = %Q{Simple data viewer for MongoDB with Sinatra}
   gem.email = "tijmen@gmail.com"
   gem.authors = ["Tijmen Brommet"]
 end
