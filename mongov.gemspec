@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "mongov"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tijmen Brommet"]
   s.date = "2011-10-05"
-  s.description = "Web interface for MongoDB with Sinatra"
+  s.description = "Simple data viewer for MongoDB with Sinatra"
   s.email = "tijmen@gmail.com"
   s.executables = ["mongov"]
   s.extra_rdoc_files = [
