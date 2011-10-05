@@ -1,0 +1,11 @@
+# bundler
+.bundle
+
+# jeweler generated
+pkg
+
+.DS_Store
+
+# For TextMate
+*.tmproj
+tmtags

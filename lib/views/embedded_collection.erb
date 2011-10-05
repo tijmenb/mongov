@@ -1,0 +1,5 @@
+<ul>
+<% documents.each do |d| %>
+  <li><%=erb :document, :locals => {:d => d} %></li>
+<% end %>
+</ul>

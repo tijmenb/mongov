@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1><a href="/">mongov</a></h1>
+</div>
+
+<table class="zebra-striped">
+  <thead>
+    <tr><th>Database</th><th>Size</th></tr>
+  </thead>
+  <tbody>
+    <% @databases.each do |db, size| %>
+      <tr><td><a href="/<%=db%>"><%=db%></a></td><td><%=size/1024/1024%>MB</td></tr>
+    <% end %>
+  </tbody>
+</table>

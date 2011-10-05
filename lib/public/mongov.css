@@ -1,0 +1,95 @@
+.page-header {
+  padding: 20px 20px 10px;
+}
+
+section.collections ul {
+  margin:0;
+}
+
+section.collections ul li {
+  list-style:none;
+  padding:0;
+}
+
+section.collections table td:first-child {
+  width:150px;
+}
+
+
+table.document tr td.key {
+  width:150px;
+  color:#888;
+  font-family: Monaco, Andale Mono, Courier New, monospace;
+  font-size:11px;
+  text-align:right;
+}
+
+table.document h2 {
+  font-size:17px;
+}
+
+table.document table.document {
+  background-color:#f1f1f1;
+}
+
+table.document table.document table.document {
+  background-color:#fff;
+}
+
+table.document table.document table.document h2 {
+  font-size:16px;
+}
+
+section.collections ul.embedded-list {
+  margin-left:10px;
+}
+
+section.collections ul.embedded-list li {
+  list-style:square;
+  margin-left:10px;
+}
+
+
+
+
+caption {
+  text-align:left;
+  margin-left:20px;
+  padding:3px;
+}
+
+caption .label.mongo.id {
+  font-size:16px;
+}
+
+.label.mongo {
+  font-size:13px;
+}
+
+.label.mongo.id {
+  background-color: #62cffc;
+}
+
+
+.mongo.label.error {
+  background-color: #f89406;
+}
+
+.mongo.label.true {
+  background-color: #46a546;
+}
+
+.mongo.label.false {
+  background-color: #c43c35;
+}
+
+.mongo.label.empty {
+
+}
+
+
+span.string {
+  color:#404040;
+}
+
+

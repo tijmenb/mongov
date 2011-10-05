@@ -1,0 +1,39 @@
+<div class="page-header">
+  <h1><a href="/">mongov</a> &rarr; <%=@database.name%></h1>
+</div>
+
+<% if flash? %>
+  <div class="alert-message block-message success">
+    <h2><%=flash%></h2>
+  </div>
+<% end %>
+
+<section class="collections">
+  <% if @collections.empty? %>
+    <div class="alert-message block-message">
+      <h2>Sorry</h2>
+      <p>No collections here.</p>
+    </div>
+  <% end %>
+
+  <table class="zebra-striped">
+    <caption><h3>Collections</h3></caption>
+    <thead>
+      <tr>
+        <th>Collection</th>
+        <th>Documents</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @collections.each do |collection| next if collection == "system.indexes" %>
+      <tr>
+        <td><a href="/<%=@database.name%>/<%=collection%>"><%=collection%></a></td>
+        <td><%=@database[collection].count%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <h4>System</h4>
+  <a href="/<%=@database.name%>/system.indexes">&rarr; system.indexes</a>
+</div>

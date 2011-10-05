@@ -1,0 +1,12 @@
+<table class='document'>
+
+  <% unless title(d).empty? %>
+    <caption><h2><small>document #</small><%=label title(d), :id%></h2></caption>
+  <% end %>
+
+  <% d.each do |k,v| %>
+    <% next if k == "_id" %>
+      <tr><td class='key'><%=k%></td><td value='value'><%=display(v)%></td></tr>
+  <% end %>
+
+</table>

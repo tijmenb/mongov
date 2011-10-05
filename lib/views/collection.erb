@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h1><a href="/">mongov</a> &rarr; <a href="/<%=@database.name%>"><%=@database.name%></a> &rarr; <%=@collection.name%></h1>
+</div>
+
+<% if @documents.count == 0 %>
+  <div class="alert-message block-message">
+    <h2>Sorry</h2>
+    <p>No documents here.</p>
+  </div>
+<% else %>
+
+  <section class="collections">
+    <div class="pagination">
+      <ul>
+        <% @pages.times do |p| %>
+          <li class="<%="active" if p+1 == @page%>"><a href="/<%=@database.name%>/<%=@collection.name%>/<%=p+1%>"><%=p+1%></a></li>
+        <% end %>
+      </ul>
+    </div>
+    <ul>
+    <% @documents.each do |d| %>
+        <li class="well"><%=erb :document, :locals => {:d => d} %></li>
+    <% end %>
+    </ul>
+  </section>
+<% end %>
+
+<% unless @collection.name == "system.indexes" %>
+<div class="actions form-stacked">
+  <h2>Danger Zone</h2>
+  <br/>
+  <form method="post" class="" action="/<%=@database.name%>/<%=@collection.name%>">
+    <input name='_method' value='delete' type='hidden' />
+    <input type="submit" value="Drop collection" class="btn danger large" onclick="return confirm('Really sure?');"/>
+  </form>
+</div>
+<% end %>
