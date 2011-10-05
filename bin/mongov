@@ -6,7 +6,7 @@ require 'mongo'
 require 'erb'
 require 'bson'
 
-version = File.read('VERSION')
+version = File.read(File.join(File.dirname(__FILE__), %w[.. VERSION]))
 puts "== Mongov/#{version} waiting for Sinatra at port 3030..."
 require File.join(File.dirname(__FILE__), %w[.. lib mongov.rb])
 Sinatra::Application.run! :port => 3030, :environment => "production"

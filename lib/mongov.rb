@@ -1,4 +1,5 @@
-require 'lib/view_helpers'
+
+require File.join(File.dirname(__FILE__), %w[.. lib view_helpers.rb])
 
 set :views , File.join( File.dirname(__FILE__), %w[views] )
 set :public, File.join( File.dirname(__FILE__), %w[public] )
